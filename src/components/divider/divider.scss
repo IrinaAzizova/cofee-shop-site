@@ -1,0 +1,27 @@
+.beans-divider {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 35px;
+    &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        right: 55px;
+        top: 45%;
+    }
+    &::after {
+        content: '';
+        width: 60px;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        left: 55px;
+        top: 45%;
+    }
+    img {
+        width: 100%;
+    }
+}
