@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 
 import './index.scss';
 
-import MainPage from './components/main-page/main-page';
+/* import MainPage from './components/main-page/main-page'; */
+import CoffeePage from './components/coffee-page/coffee-page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<React.StrictMode>
-		<MainPage/>
+		{/* <MainPage/> */}
+		<CoffeePage/>
 	</React.StrictMode>
 );

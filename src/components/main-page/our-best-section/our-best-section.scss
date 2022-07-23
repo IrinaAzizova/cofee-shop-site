@@ -4,36 +4,7 @@
     h2 {
         margin-top: 0;
     }
-    &-wrapper {
-        margin: 40px auto 0;
-        max-width: 800px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .coffee-item {
-        width: 220px;
-        height: 240px;
-        background: rgba(255, 255, 255, 0.65);
-        border-radius: 8px;
-        padding: 22px;
-        img {
-            width: 150px;
-            height: 130px;
-        }
-        &__header {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-            text-align: center;
-            margin-top: 14px;
-        }
-        &__price {
-            font-weight: 700;
-            font-size: 14px;
-            text-align: right;
-        }
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -42,12 +13,6 @@
             width: 80%;
             flex-direction: column;
             align-items: center;
-            .coffee-item {
-                margin-top: 40px;
-                &:first-of-type {
-                    margin-top: 0;
-                }
-            }
         }
     }
 }

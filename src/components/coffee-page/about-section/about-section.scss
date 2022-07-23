@@ -1,0 +1,32 @@
+.about {
+    padding: 70px 0 60px;
+    &__wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        h2 {
+            margin: 0;
+        }
+        .beans-divider {
+            margin: 20px auto 0;
+        }
+        p {
+            margin-top: 25px;
+            max-width: 346px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    &__img {
+        width: 272px;
+        max-height: 355px;
+        margin-right: 80px;
+    }
+    &__line-divider {
+        margin: 60px auto 0;
+        width: 240px;
+        border-bottom: 1px solid black;
+    }
+}
