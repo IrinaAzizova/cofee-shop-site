@@ -24,4 +24,12 @@
     img {
         width: 100%;
     }
+    &_black {
+        &::before {
+            border-bottom: 1px solid #000;
+        }
+        &::after {
+            border-bottom: 1px solid #000;
+        }
+    }
 }

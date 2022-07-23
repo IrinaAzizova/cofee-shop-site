@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@500;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Merienda';
   margin: 0;
@@ -12,8 +16,7 @@ code {
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 111px 20%;
+  margin: 0 10%;
   text-align: center;
 }
 
