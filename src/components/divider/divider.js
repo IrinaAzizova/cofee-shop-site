@@ -1,10 +1,12 @@
 import './divider.scss';
-import coffeeBeans from './coffee-beans.svg';
+import coffeeBeansWhite from './coffee-beans-white.svg';
+import coffeeBeansBlack from './coffee-beans-black.svg'; 
 
-const BeensDivider = () => {
+const BeensDivider = ({color}) => {
+    const beansColor = color === 'white' ? coffeeBeansWhite : coffeeBeansBlack;
     return (
         <div className='beans-divider'>
-            <img src={coffeeBeans} alt="coffee beans" />
+            <img src={beansColor} alt="coffee beans"/>
         </div>
     );
 };

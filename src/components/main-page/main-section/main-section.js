@@ -1,6 +1,6 @@
 import './main-section.scss'; 
 
-import Header from '../header/header';
+import Header from '../../header/header';
 import BeensDivider from '../../divider/divider';
 
 const MainSection = () => {
@@ -11,7 +11,7 @@ const MainSection = () => {
                 <h1>Everything You Love About Coffee</h1>
                 <p>We makes every day full of energy and taste</p>
                 <p>Want to try our beans?</p>
-                <BeensDivider/>
+                <BeensDivider color='white'/>
                 <button>More</button>
             </div>
             

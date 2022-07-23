@@ -1,0 +1,17 @@
+.about-us {
+    text-align: center;
+    padding-bottom: 100px;
+    .beans-divider {
+        margin: 20px auto;
+        &::before {
+            border-bottom: 1px solid #000;
+        }
+        &::after {
+            border-bottom: 1px solid #000;
+        }
+    }
+    p {
+        width: 589px;
+        margin: 40px auto 0;
+    }
+}
