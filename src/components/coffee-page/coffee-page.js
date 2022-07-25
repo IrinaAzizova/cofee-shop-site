@@ -33,7 +33,22 @@ class CoffeePage extends  Component {
         
     };
     
-    
+    onSearch = (searchValue) => {
+        if (searchValue.length === 0) {
+            this.setState({
+                coffeeData: this.props.coffeeData
+            })
+        } else {
+            this.setState(({coffeeData}) => {
+                const newData = this.props.coffeeData.filter(item => item.name.toLowerCase().indexOf(searchValue) > -1);
+                return {
+                    coffeeData : newData 
+                }
+            });
+        }
+        
+        
+    } 
 
     render() {
         const {header, descr} = aboutData[0]
@@ -46,7 +61,8 @@ class CoffeePage extends  Component {
                     descr={descr}/>
 
                 <section className="search-panel">
-                        <AppSearch/>
+                        <AppSearch
+                            onSearch={this.onSearch}/>
                         <AppFilter onUpdateCoffeeList={this.onUpdateCoffeeList}/>                    
                 </section>
 

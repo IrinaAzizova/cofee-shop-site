@@ -11,9 +11,11 @@ class AppSearch extends Component {
     }
     
     onSearch = (event) => {
+        const value = event.target.value.toLowerCase()
         this.setState({
-            searchValue: event.target.value
-        })
+            searchValue: value
+        });
+        this.props.onSearch(value);
     }
 
     render() {
@@ -22,7 +24,7 @@ class AppSearch extends Component {
                 <label htmlFor="search">Lookiing for</label>
                 <input type="text" id='search' 
                     placeholder='start typing here...'
-                    value={this.state.searchValue}
+                    defaultValue={this.state.searchValue}
                     onChange={this.onSearch}/>
             </form>        
         );
