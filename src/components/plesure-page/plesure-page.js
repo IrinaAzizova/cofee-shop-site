@@ -9,16 +9,20 @@ import AboutSection from "../about-section/about-section";
 
 const PlesurePage = () => {
 
-    const {header, descr} = aboutData[0];
+    const {header, descr, country, price, img} = aboutData[0];
     return (
         <Fragment>
             <HeaderSection h1='For your pleasure'/>
             <AboutSection 
                 header={header}
-                descr={descr}/>
+                descr={descr}
+                country={country}
+                price={price}
+                img={img}/>
             <CoffeeList
                 coffeeData={coffeeData}
-                best={false}/>
+                best={false}
+                click={false}/>
             <Footer/>
         </Fragment>
     );

@@ -1,15 +1,13 @@
 import { Fragment } from "react";
 
-import { coffeeData } from '../../coffee-data/cofeeData';
-
 import './main-page.scss';
 
 import MainSection from "./main-section/main-section";
 import AboutUs from "./about-us-section/about-us-section";
-import CoffeeList from '../../coffee-list/coffee-list';
+import CoffeeList from "../coffee-list/coffee-list";
 import Footer from "../footer/footer";
 
-const MainPage = () => {
+const MainPage = ({coffeeData}) => {
     return (
         <Fragment>
             <MainSection/>
@@ -19,7 +17,8 @@ const MainPage = () => {
                     <h2>Our Best</h2>
                     <CoffeeList
                         coffeeData={coffeeData}
-                        best={true}/>
+                        best={true}
+                        click={false}/>
                 </div>            
             </section>
             <Footer/>

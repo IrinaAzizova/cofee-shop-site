@@ -19,7 +19,7 @@ class CoffeePage extends  Component {
         super(props);
         this.state = {
             coffeeData: this.props.coffeeData,
-            currentAbout: [{header: aboutData[0].header, descr: aboutData[0].descr, country: '', price: 0, img: aboutData[0].img}]
+            currentAbout: [{header: aboutData[1].header, descr: aboutData[1].descr, country: '', price: 0, img: aboutData[1].img}]
         }
     }
 
@@ -90,6 +90,7 @@ class CoffeePage extends  Component {
                     <CoffeeList
                         coffeeData={this.state.coffeeData}                    
                         best={false}
+                        count={6}
                         onUpdateAbout={this.onUpdateAbout}/>
                 </div>
                 <Footer/>
