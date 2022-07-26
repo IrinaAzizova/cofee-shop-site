@@ -2,7 +2,7 @@ import './coffee-list.scss';
 
 import CoffeeItem from '../coffee-item/coffee-item';
 
-const CoffeeList = ({coffeeData, best}) => {
+const CoffeeList = ({coffeeData, best, onUpdateAbout}) => {
     let items;
 
     if (best) {
@@ -18,7 +18,11 @@ const CoffeeList = ({coffeeData, best}) => {
                 img={item.img}
                 name={item.name}
                 price={item.price}
-                best={best}/>
+                descr={item.descr}
+                country={item.filter}
+                best={best}
+                onUpdateAbout={onUpdateAbout}
+                />
         );
     });
 

@@ -2,6 +2,8 @@ import { Component, Fragment } from "react";
 
 import './coffee-page.scss';
 
+
+
 import { aboutData } from "../coffee-data/cofeeData";
 
 import HeaderSection from "../header-section/header-section";
@@ -16,7 +18,8 @@ class CoffeePage extends  Component {
     constructor(props){
         super(props);
         this.state = {
-            coffeeData: this.props.coffeeData
+            coffeeData: this.props.coffeeData,
+            currentAbout: [{header: aboutData[0].header, descr: aboutData[0].descr, country: '', price: 0, img: aboutData[0].img}]
         }
     }
 
@@ -45,20 +48,37 @@ class CoffeePage extends  Component {
                     coffeeData : newData 
                 }
             });
-        }
-        
-        
+        }         
     } 
 
+    onUpdateAbout = (header, descr, country, price, img) => {
+        this.setState(({currentAbout}) => {
+            const current = currentAbout.map(item => {
+                item.header = header;
+                item.descr = descr;
+                item.country = country;
+                item.price = price;
+                item.img = img;
+                return item;
+            });
+            return {
+                currentAbout: current
+            }
+        });
+    }
+
     render() {
-        const {header, descr} = aboutData[0]
+        const {header, descr, country, price, img} = this.state.currentAbout[0];
 
         return (
             <Fragment>
                 <HeaderSection h1='Our coffee'/>
                 <AboutSection
                     header={header}
-                    descr={descr}/>
+                    descr={descr}
+                    country={country}
+                    price={price}
+                    img={img}/>
 
                 <section className="search-panel">
                         <AppSearch
@@ -69,7 +89,8 @@ class CoffeePage extends  Component {
                 <div className="showcase">
                     <CoffeeList
                         coffeeData={this.state.coffeeData}                    
-                        best={false}/>
+                        best={false}
+                        onUpdateAbout={this.onUpdateAbout}/>
                 </div>
                 <Footer/>
                 

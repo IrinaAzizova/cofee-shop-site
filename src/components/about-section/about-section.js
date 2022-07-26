@@ -1,12 +1,16 @@
 import './about-section.scss';
 
-import aboutBeans from './about-our-beans.jpg';
-import aboutGoods from './about-goods.jpg';
+
 
 import BeensDivider from '../divider/divider';
 
-const AboutSection = ({header, descr}) => {
-    const img = header === 'About goods' ? aboutGoods : aboutBeans;
+const AboutSection = ({header, descr, country, price, img}) => {
+    let pCountry,
+        pPrice;
+    if (country.length > 0 && price > 0) {
+        pCountry = <p className='about__country'><b>Country:</b> {country}</p>;
+        pPrice = <p className='about__price'><b>Price:</b> {price}$</p>;
+    }
     return (
         <section className='about'>
             <div className="container">
@@ -18,6 +22,8 @@ const AboutSection = ({header, descr}) => {
                         <h2>{header}</h2>
                         <BeensDivider color='black'/>
                         <p>{descr}</p>
+                        {pCountry}
+                        {pPrice}
                     </div>
                 </div>
                 <div className="about__line-divider"></div>   

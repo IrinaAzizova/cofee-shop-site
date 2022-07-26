@@ -29,4 +29,11 @@
         width: 240px;
         border-bottom: 1px solid black;
     }
+    &__descr{
+        display: flex;
+        flex-direction: column;
+    }
+    &__price, &__country {
+        align-self: flex-start;
+    }
 }
